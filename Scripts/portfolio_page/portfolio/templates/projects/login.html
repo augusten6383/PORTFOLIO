@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "login/style.css" %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Poppins&family=Ubuntu&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Lato&family=Poppins&family=Ubuntu&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="brand">
+                <img src="{% static "login/assets/icons8-login-64.png" %}" alt="logo" class="logo-img">
+                <p>LOGGER</p>
+            </div>
+            <div id="signInPage" class="page">
+                <h2>Wellcome Back</h2>
+                <p>Wellcome Back, Please enter Your Details</p>
+            </div>
+            <div id="signUpPage" class="page">
+                <h2> Wellcome</h2>
+                <p>Enter your details for Free account</p>
+            </div>
+            <div class="toggle-buttons">
+                <button id="signInBtn" class="toggle-btn active" onclick="togglePage('signIn')">
+                    <span>Sign In</span>
+                    <div class="circle"></div>
+                </button>
+                <button id="signUpBtn" class="toggle-btn" onclick="togglePage('signUp')">
+                    <span>Sign Up</span>
+                    <div class="circle"></div>
+                </button>
+            </div>
+            <div class="page" id="signin-form">
+                <div class="email">
+                    <img src="{% static "login/assets/envelope-regular-24.png" %}" alt=" email icon">
+                    <input type="email" name="email" id="signIn-email" placeholder="Email">
+                </div>
+                <div class="password">
+                    <img src="{% static "login/assets/bx-lock-alt.svg" %}" alt="password icon">
+                    <input type="password" name="password" id="signIn-password" placeholder="Password">
+                </div>
+                <div class="show-pass">
+                    <input type="checkbox" onclick="ShowPassword()" id="pass-box">
+                    <span>Show Password</span>
+                </div>
+            </div>
+            <div class="page" id="signup-form">
+                <div class="email">
+                    <img src="{% static "login/assets/envelope-regular-24.png" %}" alt=" email icon">
+                    <input type="text" name="email" id="signIn-email" placeholder="Email">
+                </div>
+                <div class="password">
+                    <img src="{% static "login/assets/bx-lock-alt.svg" %}" alt="password icon">
+                    <input type="password" name="password" id="signIn-password" placeholder="Create Password">
+                </div>
+                <div class="password">
+                    <img src="{% static "login/assets/bx-lock-alt.svg" %}" alt="password icon">
+                    <input type="password" name="password" id="signIn-password" placeholder="Confirm Password">
+                </div>
+            </div>
+            <button class="continue-btn">Continue</button>
+            <div class="continue-opt">
+                <span class="line"></span>
+                <span class="opt">Or Continue With</span>
+                <span class="line"></span>
+            </div>
+            <div class="icons">
+                <div class="google-icon">
+                    <img src="{% static "login/assets/icons8-google.svg" %}" alt="google icon">
+                </div>
+                <div class="apple-icon">
+                    <img src="{% static "login/assets/bxl-apple.svg" %}" alt="apple icon">
+                </div>
+                <div class="facebook">
+                    <img src="{% static "login/assets/bxl-facebook.svg" %}" alt="fb-icon">
+                </div>
+            </div>
+
+        </div>
+        <img src="{% static "login/assets/money-locker.jpg" %}" alt="image" class="locker-image">
+        <script src="{% static "login/script.js" %}"></script>
+</body>
+
+</html>

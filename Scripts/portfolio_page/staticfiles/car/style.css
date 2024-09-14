@@ -1,0 +1,140 @@
+.hamburger{
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+.line1, .line2, .line3{
+    width: 25px;
+    height: 4px;
+    margin-bottom: 3px;
+    background: #000;
+    border-radius: 30px;
+    transition-duration: 0.5s;
+}
+#lines.active .line1{
+    transform: rotate(45deg) translateY(9px);
+}
+#lines.active .line3{
+    transform: rotate(-45deg) translateY(-9px);
+}
+#lines.active .line2{
+    transform: scale(0);
+}
+#menu{
+    position: absolute;
+    transform: translateX(-500rem);
+    top: 50px;
+    width: 100%;
+    transition-duration: 0.5s;
+    z-index: 1;
+    top: -10px;
+    left: -100;
+    height: 100vh;
+}
+#menu.active {
+    transform: translateX(-40px);
+}
+.list:hover{
+    font-weight: 1000;
+}
+.lux{
+    font-size: 19rem;
+    padding-left: -20rem;
+}
+.wash{
+    font-size: 14rem;
+    display: flex;
+    flex-wrap: nowrap;
+    color: #a4a4a6;
+    font-weight: bolder;
+    margin-top: -30px;
+}
+.section{
+    z-index: 2;
+}
+.car{
+    z-index: 0;
+    transform: rotate(90deg);
+    margin-top: -50rem;
+    width: 30rem;
+    filter: drop-shadow(50px 50px 50px rgba(0, 0, 0, 0.15))
+}
+.all{
+    z-index: -1;
+}
+.feture{
+    list-style-type: disc;
+    color: #a4a4a6;
+    margin-left: 10px;
+}
+@media (max-width:640px) {
+    .lux{
+        font-size: 5rem !important;
+    }
+    .wash{
+        font-size: 4rem !important;
+        margin-top: 3rem !important;
+    }
+    .car{
+        width: 10rem !important;
+        margin-top: -17rem !important;
+    }
+    .rate{
+        display: flex;
+        flex-direction: column;
+        overflow-x: visible;
+        flex-wrap: nowrap;
+        flex-shrink: unset;
+    }
+    .lists{
+        font-size: 10px;
+        margin-top: 2px;
+    }
+}
+@media (min-width:640px) and (max-width:768px) {
+    .lux{
+        font-size: 7rem !important;
+    }
+    .wash{
+        font-size: 5rem !important;
+        margin-top: 3.5rem !important;
+    }
+    .car{
+        width: 15rem !important;
+        margin-top: -23.5rem !important;
+    }
+    .rate{
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (min-width:768px) and (max-width:1024px) {
+    .lux{
+        font-size: 9rem;
+    }
+    .car{
+        width: 20rem;
+        margin-top: -30.5rem;
+    }
+    .wash{
+        font-size: 6rem;
+        margin-top: 5rem ;
+    }
+    .lists{
+        font-size: 10px;
+        margin-top: 2px;
+    }
+}
+@media (min-width:1024px) and (max-width:1280px) {
+    .lux{
+        font-size: 12rem;
+    }
+    .car{
+        width: 25rem;
+        margin-top: -40rem;
+    }
+    .wash{
+        font-size: 10rem;
+        margin-top: rem ;
+    }
+}

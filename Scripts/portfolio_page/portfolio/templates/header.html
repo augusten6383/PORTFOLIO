@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block n %}
+<header>
+    <div class="left-right animate logo">
+        AU<span>G</span>US<span>T</span>EN
+    </div>
+    <div class="menu">
+        <ul class="nav-menu" id="nav">
+            <li class="nav-item i1"><a href="" class="nav-link">Home</a></li>
+            <li class="nav-item i2"><a href="#sec2" class="nav-link">Skills</a></li>
+            <li class="nav-item i2"><a href="#sec3" class="nav-link">Services</a></li>
+            <li class="nav-item i3"><a href="#sec4" class="nav-link">Projects</a></li>
+            <li class="nav-item i4"><a href="{% url 'portfolio:resume' %}" class="nav-link">Resume</a></li>
+        </ul>
+        <div class="hamburger" id="ham">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </div>
+</header>
+{% block head %}
+
+{% endblock head %}
+{% endblock n %}

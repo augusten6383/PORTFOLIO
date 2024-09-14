@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'phone/styles.css' %}" />
+
+    <!-- Icons -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Smooth-Scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16/dist/smooth-scroll.polyfills.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="t-sec">
+          <img class="logo" src="{% static 'phone/assets/images/logo.svg'%}" alt="logo" />
+          <div class="nav-list">
+            <ul class="nav-link">
+              <li>Explore</li>
+              <li>Support</li>
+              <li>For Bussiness</li>
+            </ul>
+            <ul class="nav-icon">
+              <li><ion-icon name="search-outline"></ion-icon></li>
+              <li><ion-icon name="cart-outline"></ion-icon></li>
+              <li><ion-icon name="person-outline"></ion-icon></li>
+            </ul>
+          </div>
+        </div>
+        <div class="b-sec">
+          <h1 class="model">Galaxy S24 Ultra</h1>
+          <div class="b-right">
+            <p>From $1,299.99 before eligible trade-inᶿ</p>
+            <button class="btn-buy">BUY NOW</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <section id="hero">
+        <div class="hero-img">
+          <div class="hero-content">
+            <h1 class="hero-h1">Galaxy S24 Ultra</h1>
+            <p class="hero-p">
+              Save up to $870. Get up to $750 instant trade-in creditθ and
+              double the storage on us.V
+            </p>
+            <button class="outlined-btn">Buy now</button>
+          </div>
+        </div>
+      </section>
+      <section id="section1">
+        <h1 class="sec-h1">See what experts are saying</h1>
+        <div class="sec-p">
+          <p>Galaxy S24 Ultra is named Consumer Reports'</p>
+          <p>Top-Rated Smartphone.*</p>
+        </div>
+        <img src="{% static ' phone/assets/images/ConsumerReports.png' %}" alt="cr" class="sec-img" />
+        <a href="#" class="sec-link">See full report</a>
+        <span class="sec-term"
+          >*Consumer Reports does not endorse products or services.</span
+        >
+      </section>
+      <section id="section2">
+        <div class="sec-cent">
+          <div class="sec-vid">
+            <div class="vid1">
+              <h3>Official Film</h3>
+              <ion-icon class="play-icon" name="play-circle-outline"></ion-icon>
+            </div>
+            <div class="vid2">
+              <h3>Official Introduction Film</h3>
+              <ion-icon class="play-icon" name="play-circle-outline"></ion-icon>
+            </div>
+          </div>
+          <div class="sec-card">
+            <div class="card">
+              <h2>Camera</h2>
+              <h2>
+                "For those who want the best night shots or image adjustment
+                with AI"
+              </h2>
+              <h2>Forbes Vetted</h2>
+            </div>
+            <div class="card">
+              <h2>Galaxy AI</h2>
+              <h2>"The new era of AI-enhanced smartphones"</h2>
+              <h2>GQ</h2>
+            </div>
+            <div class="card">
+              <h2>Galaxy AI</h2>
+              <h2>"Galaxy AI actually feels like the future of phones"</h2>
+              <h2>Inverse</h2>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="section3">
+        <div class="container">
+          <h3 class="sec3-1">DESIGN</h3>
+          <h1 class="sec3-2">Sleek. Strong. Stunning.</h1>
+          <p class="sec3-3">
+            Now in titanium — the next step in tough. Experience S24 Ultra
+            through a 6.8" flat display6 with embedded S Pen.
+          </p>
+          <video autoplay muted loop class="video-bg">
+            <source src="{% static ' phone/assets/images/design.mp4' %}" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+    </main>
+    <script src="{% static 'phone/script.js' %}"></script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static "photo.css" %}">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section class="page-1">
+        <header class="border-b hover:border-orange-500">
+            <div class="container mx-auto my-5">
+                <nav>
+                    <ul class="justify-center gap-12 flex font-3xl">
+                        <li class="hover:font-semibold hover:text-orange-500 text-white"><a href="index.html">Home</a>
+                        </li>
+                        <li class="hover:font-semibold hover:text-orange-500 text-white"><a href="index.html">Home</a>
+                        </li>
+                        <li class="hover:font-semibold hover:text-orange-500 text-white"><a href="index.html">Home</a>
+                        </li>
+                        <li class="hover:font-semibold hover:text-orange-500 text-white"><a href="index.html">Home</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+    </section>
+        <main class="main">
+        <section class="slogan lg:w-3/4 border-r border-transparent lg:border-white ">
+            <div><br></div>
+            <div class="border-b lg:border-white border-transparent px-10 devider ">
+                <span class="grid-cols-2 slog-txt mt-5 tracking-widest font-thin">Let us capture moment of your
+                    Life</span>
+            </div>
+            <div class="name-div ml-10 lg:mt-10 pl-2">
+                <div class="name font-thin pl-2">Shyam <br> Kumar <br><b>P</b>hotographey</div>
+            </div>
+            <div class="flex order ml-10 mt-10 ">
+                <div class=" rounded-xl  bg-gray-900 p-3 order-txt h-12">
+                    <b>BOOK YOUR SHOOT</b>
+                </div>
+                <div class=" rounded-full bg-orange-600 cam h-20 w-20">
+                    <svg class="cam-svg" xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24"
+                        style="fill: rgba(255, 255, 255, 1);transform: ;msFilter:;">
+                        <path
+                            d="M12 8c-2.168 0-4 1.832-4 4s1.832 4 4 4 4-1.832 4-4-1.832-4-4-4zm0 6c-1.065 0-2-.935-2-2s.935-2 2-2 2 .935 2 2-.935 2-2 2z">
+                        </path>
+                        <path
+                            d="M20 5h-2.586l-2.707-2.707A.996.996 0 0 0 14 2h-4a.996.996 0 0 0-.707.293L6.586 5H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V7c0-1.103-.897-2-2-2zM4 18V7h3c.266 0 .52-.105.707-.293L10.414 4h3.172l2.707 2.707A.996.996 0 0 0 17 7h3l.002 11H4z">
+                        </path>
+                    </svg>
+                   
+
+                </div>
+            </div>
+        </section>
+        <section class="scroll-img">
+
+            <!-- for top scroll -->
+                <svg id="up" class="swapUp-btn" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" style="fill: rgb(250, 126, 44);transform: ;msFilter:;"><path d="m6.293 11.293 1.414 1.414L12 8.414l4.293 4.293 1.414-1.414L12 5.586z"></path><path d="m6.293 16.293 1.414 1.414L12 13.414l4.293 4.293 1.414-1.414L12 10.586z"></path></svg>
+
+            <!-- for left scroll -->
+            <svg class="lbtn" id="left" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(250, 126, 44);transform: ;msFilter:;"><path d="m12.707 7.707-1.414-1.414L5.586 12l5.707 5.707 1.414-1.414L8.414 12z"></path><path d="M16.293 6.293 10.586 12l5.707 5.707 1.414-1.414L13.414 12l4.293-4.293z"></path></svg>
+
+            <div class="swap-img" id="img-container">
+                <button class="img" id="img1" onclick="bgChange('img1','background-position-y -21rem')">
+                    <img src="{% static 'assets/download.jpg' %}">
+                </button>
+                <button class="img" id="img2" onclick="bgChange('img2')">
+                    <img src="{% static 'assets/fishman.jpg' %}" alt="">
+                </button>
+                <button class="img" id="img3" onclick="bgChange('img3')">
+                    <img src="{% static 'assets/img4.jpg' %}" alt="">
+                </button>
+                <button class="img" id="img4" onclick="bgChange('img4')">
+                    <img src="{% static 'assets/Untitled.jpg' %}" alt="">
+                </button>
+            </div>
+
+            <!-- for down scroll -->
+                <svg class="swapDo-btn" id="down" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0  24 24" style="fill: rgba(250, 126, 44);transform: ;msFilter:;"><path d="m12 15.586-4.293-4.293-1.414 1.414L12 18.414l5.707-5.707-1.414-1.414z"></path><path d="m17.707 7.707-1.414-1.414L12 10.586 7.707 6.293 6.293 7.707 12 13.414z"></path></svg> 
+
+            <!-- for right scroll -->
+
+            <svg class="rbtn" id="right" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(250, 126, 44);transform: ;msFilter:;"><path d="M10.296 7.71 14.621 12l-4.325 4.29 1.408 1.42L17.461 12l-5.757-5.71z"></path><path d="M6.704 6.29 5.296 7.71 9.621 12l-4.325 4.29 1.408 1.42L12.461 12z"></path></svg>
+        </section>
+    </main>
+    
+    
+    <script src="{% static "photo.js" %}"></script>  
+</body>
+
+
+</html>

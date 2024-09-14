@@ -1,0 +1,116 @@
+{% extends "header.html" %}
+{% load static %}
+{% block head %}
+<main>
+    <div class="sec1">
+        <section class="intro-container">
+            <div class="intro">
+                <h1 class="left-right animate">
+                    Hello, Im a Front end Developer
+                </h1>
+                <p class="down-up animate abt-front-end">
+                    Front-end development is the process of designing and building the user-facing parts of websites and
+                    applications
+                </p>
+                <a href="mailto:augustenrabi2020@gmail.com"><input type="button" value="Contact me"
+                        class="down-up animate contact-me"></a>
+            </div>
+            <div class="slideRight animate right-nav">
+                <div class="circle-on"></div>
+                <div class="line"></div>
+                <div class="circle"></div>
+                <div class="line"></div>
+                <div class="circle"></div>
+            </div>
+        </section>
+    </div>
+    <section class="sec2" id="sec2">
+        <div class="skills">
+            <h1 class="shead">What I can do</h1>
+            <div class="card-container">
+                <div class="skill-container" id="card1">
+                    <i class='bx bxl-html5'></i>
+                    <h2 class="structuring">Structure</h2>
+                    <p>Since I have been mastered the <span>HTML5</span> so I can structure your website good it makes
+                        the website easy to <span>E</span>dit by other developers</p>
+                </div>
+                <div class="skill-container" id="card2">
+                    <i class='bx bxl-css3'></i>
+                    <h2>Responsive</h2>
+                    <p>Cirtified as a master in <span>CSS</span> can make a website more responsible with good syling
+                    </p>
+                </div>
+                <div class="skill-container" id="card3">
+                    <i class='bx bxl-tailwind-css'></i>
+                    <h2>Fast</h2>
+                    <p>A experianced <span>T</span>ailwindcss user can style your website more fast and efficiant</p>
+                </div>
+                <div class="skill-container" id="card4">
+                    <i class='bx bxl-django'></i>
+                    <h2>Dynamyc</h2>
+                    <p><span>S</span>kill full in <span>D</span>jango and <span>J</span>avaScript can make you websites
+                        with Dynamyc with less codes and also keep your website updated withod <span>U</span>pdating
+                        codes like latest updates of your company and latest products with the help of
+                        <span>M</span>ysql Skills
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="right-nav1">
+            <div class="circle"></div>
+            <div class="line"></div>
+            <div class="circle-on"></div>
+            <div class="line"></div>
+            <div class="circle"></div>
+        </div>
+    </section>
+    <section class="sec3" id="sec3">
+        <div class="service-container">
+            <h1 id="pin"><span>S</span>ervices</h1>
+            {% for service in services %}
+            <div class="services serv-2">
+                <h2>{{service.title}}</h2>
+                <div class="service-items">
+                    <p>{{service.about}}</p>
+                    <div class="pricing">
+                        <p> pricing : {{service.pricing}} </p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    <section class="sec4" id="sec4">
+        <h1 class="phead"><span>P</span>rojects</h1>
+        <div class="img-container">
+            <div class="imgs " id="imgs">
+                <a href="{% url  'portfolio:photo' %}"> <img class="pro "  src="{% static 'main/photo.png' %}"></a>
+            </div>
+            <div class="imgs1 " id="imgs">
+                <a href="{% url  'portfolio:car' %}"> <img class="pro "    src="{% static 'main/car.png' %}"></a>
+            </div>
+            <div class="imgs2 " id="imgs">
+                <a href="{% url  'portfolio:phone' %}"> <img class="pro "  src="{% static 'main/phone.png' %}"></a>
+            </div>
+            <div class="imgs3 " id="imgs" >
+                <a href="{% url  'portfolio:login' %}"> <img class="pro"   src="{% static 'main/login.png' %}"></a>
+            </div>
+            {% comment %} <div class="imgs">
+                <a href="./photo-landing.html"> <img src="{% static 'assets/dummy.png' %}"></a>
+            </div>
+            <div class="imgs">
+                <a href="./photo-landing.html"> <img src="{% static 'assets/dummy.png' %}"></a>
+            </div>
+            <div class="imgs">
+                <a href="./photo-landing.html"> <img src="{% static 'assets/dummy.png' %}"></a>
+            </div>
+            <div class="imgs">
+                <a href="./photo-landing.html"> <img src="{% static 'assets/dummy.png' %}"></a>
+            </div>
+            <div class="imgs">
+                <a href="./photo-landing.html"> <img src="{% static 'assets/dummy.png' %}"></a>
+            </div> {% endcomment %}
+        </div>
+    </section>
+</main>
+{% endblock head %}

@@ -1,0 +1,220 @@
+li{
+    list-style: none;
+    filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.50));
+}
+*{
+    font-family: poppins;
+    color: white;
+}
+body{
+    overflow-x: hidden;
+}
+.slog-txt{
+    font-size: 3vw;
+    overflow-x: hidden;
+    text-wrap: nowrap;
+    filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.50));
+}
+body{
+    background-image: url(./assets/fishman.jpg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -21rem;
+    @media (max-width:768px) {
+        background-position-y: -15rem;
+    }
+    @media (max-width:600px) {
+        background-position-y: 0rem;
+    }
+}
+.devider{
+    width: 100%;
+}
+.name{
+    font-size: 3rem;
+    border-left: 2px solid white;
+    filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.50));
+}
+@media (max-width:780px) {
+    .slog-txt{
+        font-size: 4vw !important;
+    }
+}
+@media (max-width: 1024px) {
+    .name-div{
+        margin-top: 5rem;
+    }
+    .slog-txt{
+        position: relative;
+        right: calc(10%-50%);
+    }
+}
+.order-txt{
+    width: 18rem;
+}
+.cam{
+    margin-left: -4rem;
+    position: relative;
+    top: -12px;
+    left: -30px;
+}
+.cam-svg{
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+.swapUp-btn{
+    position: absolute;
+    margin-left: 10rem;
+    margin-top: -3rem;
+    cursor: pointer;
+}
+.swapDo-btn{
+    position: absolute;
+    margin-left: 10rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+.swap-img{
+    margin-top: -5px;
+    height: 21.8rem;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
+/* .swap-img div{
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    flex: none;
+} */
+.swap-img::-webkit-scrollbar{
+    display: none;
+}
+.img:nth-child(01)>img, .img:nth-child(02)>img, .img:nth-child(03)>img, .img:nth-child(04)>img{
+    width: 15rem;
+    height: 10rem;
+    border: 2px solid white;
+    cursor: pointer;
+}
+.scroll-img{
+    height: fit-content;
+    margin-top: 5.2rem;
+}
+.img{
+    width: fit-content;
+    height: fit-content;
+    margin-left: 3.5rem;
+    margin-top: 10px;
+}
+.img:active{
+    border: none;
+    outline: none;
+}
+.main{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+.rbtn, .lbtn{
+    display: none;
+}
+@media (max-width: 900px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        padding-right: 40px;
+        align-items: center;
+    }
+    #up, #down {
+        display: none;
+    }
+    #img-container {
+        height: auto;
+        width: 70%;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        flex-shrink: unset;
+    }
+    .scroll-img {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: unset;
+        width: 100%;
+        align-items: center;
+        margin-top: 0px;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    .img {
+        flex: 0 0 auto;
+        width: calc(35% - 10px);
+        height: auto;
+        margin-right: 10px;
+    }
+    .img > img {
+        width: 100%;
+        height: auto;
+        border: 2px solid white;
+        cursor: pointer;
+    }
+    .rbtn, .lbtn{
+        display: block;
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        padding-right: 40px;
+        align-items: center;
+    }
+    #up, #down {
+        display: none;
+    }
+    #img-container {
+        height: auto;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        flex-shrink: unset;
+    }
+    .scroll-img {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: unset;
+        width: 100%;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    .img {
+        flex: 0 0 auto;
+        width: fit-content;
+        height: auto;
+    }
+    .img > img {
+        width: 100%;
+        height: auto;
+        border: 2px solid white;
+        cursor: pointer;
+    }
+}

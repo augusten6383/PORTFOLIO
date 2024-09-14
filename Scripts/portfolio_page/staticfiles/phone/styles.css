@@ -1,0 +1,485 @@
+/* Importing Samsung fonts */
+@font-face {
+  font-family: "Samsung Sharp Sans Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Samsung Sharp Sans Regular"),
+    url("./assets/fonts/samsungsharpsans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Samsung Sharp Sans Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Samsung Sharp Sans Medium"),
+    url("./assets/fonts/samsungsharpsans-medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Samsung Sharp Sans Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Samsung Sharp Sans Bold"),
+    url("./assets/fonts/samsungsharpsans-bold.woff") format("woff");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Samsung Sharp Sans Medium;
+}
+/* Colors */
+* {
+  --btn-color: #006bea;
+  --card-color: #1f1f26;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+/* Nav-Bar */
+nav {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  background-color: white;
+}
+
+/* Top section */
+.t-sec {
+  height: 80px;
+  padding: 0px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(208, 208, 208);
+}
+
+.logo {
+  width: 150px;
+  height: 32px;
+}
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+li {
+  all: unset;
+  cursor: pointer;
+}
+.nav-link > li {
+  padding: 10px;
+  margin: 10px;
+}
+
+.nav-link > li:hover {
+  color: white;
+  background-color: black;
+  border-radius: 40px;
+}
+.nav-icon {
+  margin-left: 50px;
+}
+
+.nav-icon > li {
+  font-size: 30px;
+  padding: 10px;
+}
+.b-sec {
+  position: sticky;
+  top: 0;
+  z-index: 0;
+  transition: top 0.3s;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(208, 208, 208);
+}
+.b-sec.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+.padtop {
+  padding-top: 70px;
+}
+
+.model {
+  font-size: 1.3rem;
+  font-family: Samsung Sharp Sans Bold;
+  margin: 0px 10px 0px 20px;
+}
+.b-right {
+  display: flex;
+  align-items: center;
+}
+.btn-buy {
+  all: unset;
+  color: white;
+  background-color: var(--btn-color);
+  height: 70px;
+  width: 220px;
+  font-family: Samsung Sharp Sans Bold;
+  text-align: center;
+  margin-left: 50px;
+}
+.btn-buy:hover {
+  cursor: pointer;
+}
+
+/* Main */
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+/* Hero section */
+section {
+  height: 800px;
+  background: black;
+  color: white;
+}
+
+.hero-img {
+  width: 100%;
+  height: 800px;
+  background-color: black;
+  background-image: url("./assets/images/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  height: 300px;
+  width: 550px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-left: 200px;
+}
+
+.hero-h1 {
+  font-size: 4rem;
+  margin-bottom: 30px;
+  font-family: Samsung Sharp Sans Bold;
+}
+.hero-p {
+  margin-bottom: 40px;
+  font-family: Samsung Sharp Sans Bold;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  width: 90%;
+  line-height: 20px;
+}
+
+.outlined-btn {
+  all: unset;
+  padding: 12px 18px;
+  border: 2px solid white;
+  border-radius: 40px;
+  width: 100px;
+  height: 25px;
+  text-align: center;
+}
+
+/* Section1 */
+#section1 {
+  margin: 200px 0px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+}
+.sec-h1 {
+  font-size: 4.5rem;
+  margin-bottom: 60px;
+}
+.sec-p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Samsung Sharp Sans Bold;
+  font-size: 2rem;
+  margin-bottom: 35px;
+}
+.sec-img {
+  width: 170px;
+  margin-bottom: 35px;
+}
+.sec-link {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 35px;
+}
+.sec-term {
+  font-size: 0.8rem;
+  color: grey;
+}
+
+/* Section2 */
+
+#section2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sec-cent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 300px;
+}
+.sec-vid {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.vid1,
+.vid2 {
+  width: 600px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 30px;
+  margin: 0px 20px;
+}
+
+.vid1 {
+  border-right: 2px solid grey;
+}
+.play-icon {
+  font-size: 30px;
+}
+
+/* card designing */
+.sec-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 300px;
+  padding: 60px 50px;
+  border-radius: 40px;
+  background-color: var(--card-color);
+  margin-right: 50px;
+  text-align: center;
+}
+
+.card > h2 {
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+/* Section 3 */
+#section3 {
+  margin-bottom: none;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.sec3-1 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.sec3-2 {
+  font-size: 5rem;
+  margin-bottom: 60px;
+}
+.sec3-3 {
+  font-size: 1.3rem;
+  width: 50%;
+  text-align: center;
+}
+.video-bg {
+  width: 100%;
+}
+
+/* Mobile view */
+
+@media only screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+    width: 100vw;
+    height: auto;
+  }
+
+  .t-sec {
+    height: auto;
+    padding: 10px;
+  }
+  .logo {
+    width: 120px;
+    height: 26px;
+  }
+  .nav-link {
+    display: none;
+  }
+  .nav-icon {
+    margin-left: 0;
+  }
+  .nav-icon > li {
+    font-size: 24px;
+    padding: 8px;
+  }
+
+  .b-sec {
+    height: auto;
+    padding: 10px;
+  }
+  .b-right > p {
+    display: none;
+  }
+  .model {
+    font-size: 1rem;
+    margin: 5px;
+  }
+  .btn-buy {
+    height: 50px;
+    width: 180px;
+    margin-left: 20px;
+  }
+  .btn-buy:hover {
+    cursor: pointer;
+  }
+
+  .hero-img {
+    background-image: url("./assets/images/mobile-hero.png");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .hero-content {
+    position: relative;
+    top: -200px;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin-left: 20px;
+  }
+  .hero-h1 {
+    font-size: 2.5rem;
+  }
+  .hero-p {
+    font-size: 0.7rem;
+    text-align: center;
+    line-height: 1.2rem;
+  }
+  .outlined-btn {
+    padding: 10px 14px;
+    width: 80px;
+  }
+
+  #section1 {
+    margin: 100px 0px;
+    height: auto;
+    padding: 0 10px;
+    margin-bottom: 300px;
+  }
+  .sec-h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .sec-p {
+    font-size: 0.7rem;
+  }
+  .sec-img {
+    width: 120px;
+  }
+  .sec-link {
+    font-size: 0.7rem;
+  }
+  .sec-term {
+    font-size: 0.5rem;
+  }
+
+  #section2 {
+    width: 100%;
+    margin-bottom: 100px;
+  }
+  .sec-cent {
+    width: 100%;
+  }
+  .sec-vid {
+    justify-content: center;
+
+    display: none;
+  }
+  .vid1,
+  .vid2 {
+    width: 90%;
+    margin: 10px 0;
+    padding: 8px 15px;
+  }
+  .vid1 {
+    border-right: none;
+  }
+
+  .sec-card {
+    flex-direction: column;
+    margin-left: 50px;
+  }
+  .card {
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 30px 20px;
+  }
+
+  #section3 {
+    padding: 0 10px;
+    margin-bottom: 0px;
+    height: 500px;
+    width: 100%;
+  }
+  .container {
+    width: 100%;
+  }
+  .sec3-1 {
+    font-size: 1rem;
+  }
+  .sec3-2 {
+    font-size: 1.5rem;
+  }
+  .sec3-3 {
+    font-size: 1rem;
+    width: 90%;
+  }
+  .video-bg {
+    height: auto;
+  }
+}

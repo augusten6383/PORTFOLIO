@@ -1,0 +1,290 @@
+body {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #DEE1E8;
+    font-family: lato;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    width: 90%;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.locker-image {
+    width: 50%;
+    object-fit: cover;
+    order: 2;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+    order: 1;
+    align-items: center;
+}
+
+.logo-img {
+    width: 40px;
+    height: fit-content;
+    margin-top: 28px;
+}
+
+.brand {
+    font-family: poppins;
+    display: flex;
+}
+
+.brand p {
+    font-weight: 900;
+    font-size: 30px;
+}
+
+#signInPage {
+    align-items: center;
+    text-align: center;
+}
+
+#signInPage h2 {
+    font-family: poppins;
+}
+
+#signInPage p {
+    margin-top: -18px;
+    color: #D4D4D4;
+    font-size: 12px;
+}
+#signUpPage {
+    display: none;
+    align-items: center;
+    text-align: center;
+}
+
+#signUpPage h2 {
+    font-family: poppins;
+}
+
+#signUpPage p {
+    margin-top: -18px;
+    color: #D4D4D4;
+    font-size: 12px;
+}
+
+.toggle-buttons {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+    width: 300px;
+    height: 60px;
+    border-radius: 25px;
+    align-items: center;
+    padding: 0 5px 0 5px;
+}
+
+.toggle-btn {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+}
+
+.toggle-btn.active {
+    background-color: white;
+    height: 50px;
+}
+.email{
+    display: flex;
+    margin-top: 30px;
+    width: 300px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 0 5px 0 5px;
+    align-items: center;
+}
+#signIn-email{
+    background-color: transparent;
+    border: 0;
+    border-left: 1px solid;
+    margin-left: 5px;
+    height: 20px;
+    padding: 0px 0px 0 5px;
+}
+#signIn-email:focus{
+    outline: 0 solid;
+}
+.password{
+    display: flex;
+    margin-top: 30px;
+    width: 300px;
+    height: 40px;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 0 5px 0 5px;
+    align-items: center;
+}
+#signIn-password{
+    background-color: transparent;
+    border: 0;
+    border-left: 1px solid;
+    margin-left: 5px;
+    height: 20px;
+    padding: 0px 0px 0 5px
+}
+#signIn-password{
+    outline: 0 solid;
+}
+
+#signup-form{
+    display: none;
+}
+.continue-btn{
+    margin-top: 50px;
+    width: 310px;
+    height: 60px;
+    border-radius: 20px;
+    border-color: transparent;
+    background-color: #3966FF;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+.continue-opt{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 12px;
+    color: #A2A2A2;
+    font-weight: 400;
+}
+.line {
+    width: 90px;
+    height: 1px;
+    background-color: black;
+    margin: 0 10px;
+}
+.icons{
+    display: flex;
+    margin-top: 50px;
+}
+.google-icon{
+    padding:8px;
+    border-radius: 100px;
+    background-color: whitesmoke;
+    width: min-content;
+    height: min-content;
+    margin-right: 40px;
+}
+.google-icon img{
+    width: 30px;
+    height: fit-content;
+}
+.apple-icon{
+    background-color: whitesmoke;
+    border-radius: 100px;
+    padding: 8px;
+    margin-right: 40px;
+}
+.apple-icon img{
+    width: 30px;
+}
+.facebook{
+    background-color: whitesmoke;
+    border-radius: 100px;
+    padding: 8px;
+    margin-right: 40px;
+}
+.facebook img{
+    width: 30px;
+}
+.show-pass{
+    margin-top: 10px;
+    font-size:13px;
+    font-weight: 400;
+    font-family: poppins;
+    display: grid;
+    grid-template-columns: 20px auto;
+    gap: 0.5em;
+}
+.show-pass input{
+    width: 13px;
+}
+@media (max-width: 1200px) {
+    .container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .locker-image {
+        display: none;
+    }
+
+    .content {
+        order: 2;
+        padding: 20px 10px;
+    }
+
+    .email, .password,{
+        width: 100%;
+    }
+
+    .toggle-buttons {
+        height: auto;
+        padding: 5px;
+    }
+
+    .toggle-btn {
+        padding: 10px 5px;
+    }
+
+    .icons {
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .google-icon, .apple-icon, .facebook {
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-img{
+        margin-top: 15px;
+    }
+    .brand p {
+        font-size: 24px;
+    }
+
+    .continue-opt {
+        font-size: 10px;
+    }
+    .toggle-buttons{
+        width: 90%;
+    }
+}
