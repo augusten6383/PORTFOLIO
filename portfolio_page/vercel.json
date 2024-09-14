@@ -9,5 +9,9 @@
             "src": "/(.*)",
             "dest": "portfolio_page/wsgi.py"
         }
+    ],
+    "rewrites": [
+        {"source": "/(.*)", "destination": "/"}
     ]
+    
 }
