@@ -5,10 +5,9 @@ from django.db import models
 from django.urls import reverse
 from portfolio.models import service
 
-
 def index(request):
-    services = service.objects.all()
-    return render(request, 'index.html', {'services':services, 'portfolio':photo, 'portfolio':car    })
+    all_services = service.objects.all()
+    return render(request, 'index.html', {'all_services': all_services, 'photo_portfolio': photo, 'car_portfolio': car})
 
 def resume(request):
     return render(request, 'resume.html')
@@ -24,4 +23,3 @@ def phone(request):
 
 def login(request):
     return render(request, 'projects/login.html')
-
