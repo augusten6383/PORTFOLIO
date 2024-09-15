@@ -64,21 +64,22 @@
             <div class="circle"></div>
         </div>
     </section>
-    <section class="sec3" id="sec3">
-        <div class="service-container">
-            <h1 id="pin"><span>S</span>ervices</h1>
-            {% for service in services %}
-            <div class="services serv-2">
-                <h2>{{service.title}}</h2>
-                <div class="service-items">
-                    <p>{{service.about}}</p>
-                    <div class="pricing">
-                        <p> pricing : {{service.pricing}} </p>
+        <section class="sec3" id="sec3">
+            <div class="service-container">
+                <h1 id="pin"><span>S</span>ervices</h1>
+                {% comment %} {{ services|length }} services found {% endcomment %}
+                {% for service in services %}
+                <div class="services serv-2">
+                    <h2>{{service.title}}</h2>
+                    <div class="service-items">
+                        <p>{{service.about}}</p>
+                        <div class="pricing">
+                            <p> pricing : {{service.pricing}} </p>
+                        </div>
                     </div>
                 </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
     </section>
     <section class="sec4" id="sec4">
         <h1 class="phead"><span>P</span>rojects</h1>

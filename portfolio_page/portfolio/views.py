@@ -3,11 +3,11 @@ from django.http import HttpResponse
 from django.template import loader
 from django.db import models
 from django.urls import reverse
-from portfolio.models import service
+from portfolio.models import Service
 
 def index(request):
-    all_services = service.objects.all()
-    return render(request, 'index.html', {'all_services': all_services, 'photo_portfolio': photo, 'car_portfolio': car})
+    services = Service.objects.all()
+    return render(request, 'index.html', {'services': services, 'photo_portfolio': photo, 'car_portfolio': car})
 
 def resume(request):
     return render(request, 'resume.html')

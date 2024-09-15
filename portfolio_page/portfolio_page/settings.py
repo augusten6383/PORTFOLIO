@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-9u2&q(vv8qcg*-^8_s=sg%cu(kcckptatm-o8r3wn)nw5i*z1f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['.vercel.app','127.0.0.1', 'localhost']
 
@@ -78,16 +78,10 @@ WSGI_APPLICATION = 'portfolio_page.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'services',
-        'USER': 'root',
-        'PASSWORD': 'Rabi@2020',
-        'HOST': 'localhost',
-  # Replace with your MySQL server's hostname if necessary
-        'PORT': '3306',  # Replace with your MySQL server's port if necessary
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

@@ -1,4 +1,4 @@
-from portfolio.models import service
+from portfolio.models import Service
 from django.core.management.base import BaseCommand
 from typing import Any
 
@@ -21,8 +21,9 @@ class Command(BaseCommand):
         pricing = [
             '$500-$1000', ' $350 - $700',  '$200 - $450', '$280 - $550', ' $140 - $280', '$420 - $700'
         ]
-        for title, about, pricing in zip(title, about, pricing):
-            service.objects.create(title=title, about=about, pricing=pricing)
-            
-        self.stdout.write(self.style.SUCCESS("completed"))
-        
+        try:
+            for title, about, pricing in zip(title, about, pricing):
+                Service.objects.create(title=title, about=about, pricing=pricing)
+            self.stdout.write(self.style.SUCCESS("completed"))
+        except Exception as e:
+            self.stdout.write(self.style.ERROR(f"Error inserting data: {e}"))
