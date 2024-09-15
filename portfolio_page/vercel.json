@@ -1,11 +1,13 @@
 {
     "builds": [{
         "src": "portfolio_page/wsgi.py",
-        "use": "@vercel/python",
-        "config":{"maxLambdaSize": "15mb", "runtime": "python3.9"}
+        "use": "@ardnt/vercel-python-wsgi",
+        "config": { "maxLambdaSize": "15mb" }
     }],
-    "rewrites": [
-        {"source": "/(.*)", "destination": "/"}
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "portfolio_page/wsgi.py"
+        }
     ]
-    
 }
